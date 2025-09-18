@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>DOM Practice</title>
+	<style>
+		body { font-family: Arial, sans-serif; padding: 20px; }
+		.highlight { padding: 6px; }
+		.test { margin: 6px 0; }
+	</style>
+</head>
+<body>
+	<h1 id="title">Original Title</h1>
+
+	<p>This is paragraph one.</p>
+	<p>This is paragraph two.</p>
+	<p>This is paragraph three.</p>
+
+	<div class="test">Test element A</div>
+	<div class="test">Test element B</div>
+
+	<div class="highlight">First highlight (will change)</div>
+	<div class="highlight">Second highlight</div>
+
+	<h3>List</h3>
+	<ul>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+		<li>Placeholder</li>
+	</ul>
+
+	<!-- New examples for innerHTML / textContent / innerText -->
+	<section>
+		<h2>innerHTML vs textContent examples</h2>
+		<div id="div-replace">Original div content</div>
+		<p id="plain-text-example">Some <strong>HTML</strong> inside this paragraph.</p>
+		<p class="to-update">Will be updated on load</p>
+		<button id="replace-btn">Replace div with &lt;h3&gt;New Heading Inside Div&lt;/h3&gt;</button>
+	</section>
+
+	<!-- Hidden element to demonstrate innerText vs textContent -->
+	<section style="margin-top:20px;">
+		<h2>innerText vs textContent demo</h2>
+		<div id="hidden" style="display:none;">Hidden <span>HTML</span> content</div>
+	</section>
+
+	<script>
+		// 1. change h1 text
+		const h1 = document.getElementById('title');
+		if (h1) h1.textContent = 'DOM Practice Started!';
+
+		// 2. color each paragraph using getElementsByTagName
+		const ps = document.getElementsByTagName('p');
+		const colors = ['#e74c3c', '#27ae60', '#2980b9'];
+		for (let i = 0; i < ps.length; i++) {
+			ps[i].style.color = colors[i % colors.length];
+		}
+
+		// 3. bold elements with class "test"
+		const tests = document.getElementsByClassName('test');
+		for (let i = 0; i < tests.length; i++) {
+			tests[i].style.fontWeight = 'bold';
+		}
+
+		// 4. highlight first .highlight using querySelector
+		const firstHl = document.querySelector('.highlight');
+		if (firstHl) firstHl.style.backgroundColor = '#fffbcc';
+
+		// 5. number li items inside ul using querySelectorAll
+		const items = document.querySelectorAll('ul li');
+		items.forEach((li, idx) => {
+			li.textContent = 'Item ' + (idx + 1);
+		});
+
+		// --- New tasks ---
+
+		// 1. Use innerHTML to replace the content of a div with h2 and paragraph
+		const divReplace = document.getElementById('div-replace');
+		if (divReplace) {
+			divReplace.innerHTML = '<h2>Inserted Heading</h2><p>This paragraph was added with innerHTML.</p>';
+		}
+
+		// 2. Use textContent to set text and verify tags are not parsed
+		const plain = document.getElementById('plain-text-example');
+		if (plain) {
+			plain.textContent = '<em>This will be plain text, tags will not render</em>';
+		}
+
+		// 3. innerText vs textContent on hidden element
+		const hidden = document.getElementById('hidden');
+		if (hidden) {
+			console.log('hidden.textContent ->', hidden.textContent);
+			console.log('hidden.innerText ->', hidden.innerText);
+		}
+
+		// 4. Change paragraph text dynamically on load
+		const toUpdate = document.querySelector('.to-update');
+		if (toUpdate) toUpdate.textContent = 'Updated by JavaScript!';
+
+		// 5. Button to replace div content with <h3> on click
+		const btn = document.getElementById('replace-btn');
+		if (btn && divReplace) {
+			btn.addEventListener('click', () => {
+				divReplace.innerHTML = '<h3>New Heading Inside Div</h3>';
+			});
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+/* Simple and Beginner-Friendly Resume Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.designation {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-item {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.contact-item a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+.nav {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.nav a {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.nav a:hover {
+    background-color: #45a049;
+}
+
+/* Main Content */
+.main-content {
+    padding: 0;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #fefefe;
+    border-left: 4px solid #4CAF50;
+    border-radius: 5px;
+}
+
+.section h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.section p {
+    text-align: justify;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Skills Table */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.skills-table th,
+.skills-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.skills-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.skills-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Projects List */
+.projects-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.projects-list li {
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 3px solid #4CAF50;
+}
+
+.projects-list li strong {
+    color: #2c3e50;
+}
+
+/* Media Section - Simplified */
+.media-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.audio-intro, .video-intro {
+    margin: 15px 0;
+    display: block;
+    width: 100%;
+}
+
+.media-section h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+audio, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Certifications */
+.certifications dl {
+    margin-top: 15px;
+}
+
+.certifications dt {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.certifications dd {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    color: #555;
+}
+
+/* Profile Links - Simplified */
+.profile-embeds {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.profile-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.profile-section h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.embed-frame {
+    display: none; /* Hide complex iframes for simplicity */
+}
+
+.profile-section a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.profile-section a:hover {
+    background-color: #45a049;
+}
+
+/* Download Section */
+.download-resume {
+    text-align: center;
+    padding: 20px;
+    background-color: #e8f5e8;
+    border-radius: 8px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    .profile-embeds {
+        grid-template-columns: 1fr;
+    }
+    
+    .audio-intro, .video-intro {
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+}

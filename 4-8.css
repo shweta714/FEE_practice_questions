@@ -1,0 +1,40 @@
+/* Basic CSS Styling Requirements */
+
+/* Body styling */
+body {
+    font-family: Verdana, sans-serif;
+    background-color: rgb(240, 248, 255);
+}
+
+/* Header with ID main-header */
+#main-header {
+    background-color: white;
+    text-align: center;
+}
+
+/* Grouping selector for h1 and h2 elements */
+h1, h2 {
+    color: #1f618d;
+}
+
+/* Class selector for card elements */
+.card {
+    border: 1px solid gray;
+    padding: 15px;
+    margin: 10px;
+}
+
+/* Descendant selector for list items inside ul */
+ul li {
+    color: darkgreen;
+}
+
+/* Class selector for tagline paragraph */
+.tagline {
+    font-style: italic;
+}
+
+/* Hover effect for h2 elements */
+h2:hover {
+    background-color: lightyellow;
+}

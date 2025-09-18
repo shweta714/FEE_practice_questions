@@ -1,0 +1,78 @@
+/* Question 1: Make Items Inline */
+/* Make list items appear horizontally in the same line */
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Question 2: Hide and Show an Element */
+/* Hide the paragraph with class .secret */
+.secret {
+    display: none;
+}
+
+/* Question 3: Block vs Inline */
+/* Make span elements behave like block with fixed width and height */
+.box1, .box2 {
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: lightblue;
+    margin: 10px 0;
+    text-align: center;
+    line-height: 50px;
+}
+
+.box2 {
+    background-color: lightcoral;
+}
+
+/* Question 4: Sticky Sidebar */
+/* Create a sticky sidebar that sticks to top while scrolling */
+.sidebar {
+    position: sticky;
+    top: 0;
+    width: 200px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.content {
+    height: 2000px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Question 5: Tooltip with Inline-Block */
+/* Make tooltip container inline-block with width and height */
+.tooltip-container {
+    display: inline-block;
+    position: relative;
+    background-color: lightgreen;
+    padding: 10px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.tooltip-container:hover .tooltip {
+    display: block;
+}

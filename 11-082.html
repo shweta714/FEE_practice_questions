@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Navigation and Images</title>
+  <style>
+    /* Basic styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    nav {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li {
+      cursor: pointer;
+    }
+
+    img {
+      max-width: 400px; /* default max width */
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    /* 1. Hide nav on portrait orientation */
+    @media (orientation: portrait) {
+      nav {
+        display: none;
+      }
+    }
+
+    /* 2. Scale images to 100% width on mobile (max-width 600px) */
+    @media (max-width: 600px) {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
+
+  <h1>Responsive Design Demo</h1>
+
+  <p>Resize your browser or rotate your device to see the effects:</p>
+
+  <img src="https://via.placeholder.com/400x200" alt="Sample Image 1" />
+  <img src="https://via.placeholder.com/400x300" alt="Sample Image 2" />
+  
+
+</body>
+</html>
