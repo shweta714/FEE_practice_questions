@@ -30,8 +30,7 @@ function logMessage(msg) {
     console.log(msg);
 }
 
-Promise.resolve("Hello from the promise!").then(logMessage);
-// Logs: "Hello from the promise!"
+Promise.resolve("Hello from 2410990784!").then(logMessage);
 function testPromise(isSuccess) {
     return new Promise((resolve, reject) => {
         if(isSuccess) resolve("Success!");
@@ -39,7 +38,7 @@ function testPromise(isSuccess) {
     });
 }
 
-testPromise(false).catch(err => console.log(err)); // Logs: "Failure!"
+testPromise(false).catch(err => console.log(err)); 
 Promise.resolve("All good")
     .then(val => console.log("Then:", val))
     .catch(err => console.log("Catch:", err));
@@ -50,7 +49,7 @@ new Promise(function(resolve, reject) {
     reject("Error found");
 })
 .then(function(value) {
-    console.log("This will not run");
+    console.log("This will not ");
 })
 .catch(function(error) {
     console.log(error);
